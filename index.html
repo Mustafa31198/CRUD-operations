@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <link rel="shortcut icon" href="image/5801789.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+    <link href="
+    https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.min.css
+    " rel="stylesheet">
+
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+
+    <section>
+        <div class="container w-80 m-auto py-5 position-relative z-0">
+            <div class="row ">
+                <h1 class="text-center p-0 m-auto w-auto position-relative d-block ">Bookmarker</h1>
+
+                <div class="bookmark-body py-3 mt-5 ">
+                    <h2 class="text-center "><i class="fa-solid fa-bookmark fs-5 me-2 "></i>Bookmark your favorite
+                        sites<i class="fa-solid fa-bookmark fs-5 ms-2 "></i></h2>
+
+                    <label for="siteName" class="fw-bold"><i class="fa-solid fa-book-bookmark me-2"></i>Site Name</label>
+                    <input oninput="validateForm(this)" class="form-control mb-3" id="siteName" type="text"
+                        placeholder="Bookmark Name">
+                        <div class="alert-danger d-none">
+                            <span class="fs-6 fw-bold">Website Name:</span>
+                            <p class="fs-6">Website name must contain at least 3 char.</p>
+                        </div>
+
+
+                    <label for="siteUrl" class="fw-bold"><i class="fa-solid fa-link me-2"></i>Site URL</label>
+                    <input oninput="validateForm(this)" class="form-control" id="siteUrl" type="text"
+                        placeholder="Website URL">
+                        <div class="alert-danger d-none">
+                            <span class="fs-6 fw-bold">Website Url:</span>
+                            <p class="fs-6">Website url must be(https://www.example.ex).</p>
+                        </div>
+
+                    <div class="text-center"><button onclick="submitSite()"
+                            class="btn btn-danger px-5 mt-3 ">Submit</button></div>
+                </div>
+
+                <table class="bg-light text-center mt-3 ">
+                    <thead>
+                        <tr class="">
+                            <th class="py-2">index</th>
+                            <th class="py-2">Website Name</th>
+                            <th class="py-2">Visit</th>
+                            <th class="py-2">Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="siteData">
+                    </tbody>
+                </table>
+
+
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    <script src="
+    https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.all.min.js
+    "></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
